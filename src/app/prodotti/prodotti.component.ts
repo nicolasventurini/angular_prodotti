@@ -42,12 +42,8 @@ export class ProdottoComponent implements OnInit {
     this.listFilter = '';
   }
 
-  fromStelle: string = "";
-  onStelleClick(valore: string):void
-  {
+  fromStelle: string = '';
+  onStelleClick(valore: string): void {
     this.fromStelle = valore;
   }
-
 }
-
-
