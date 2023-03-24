@@ -3,6 +3,9 @@
   <h4>Filtrato per {{ listFilter }}</h4>
 </div>
 <h2>Prodotti</h2>
+
+<div>Valor del rating: {{ fromStelle }}</div>
+
 <button (click)="mostraNascondi()">Clicca per visualizzare le immagini</button>
 
 <br /><br />
@@ -24,7 +27,12 @@
       <td>{{ a.releaseDate }}</td>
       <td>{{ a.price | currency: "EUR":"symbol"}}</td>
       <!--<td>{{ a.starRating }}</td>-->
-      <td><stella [rating]="a.starRating"></stella></td>
+      <td>
+        <stella
+          [rating]="a.starRating"
+          (dalleStelle)="onStelleClick($event)"
+        ></stella>
+      </td>
     </tr>
   </table>
 </div>

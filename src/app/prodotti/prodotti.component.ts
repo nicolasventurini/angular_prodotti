@@ -41,4 +41,13 @@ export class ProdottoComponent implements OnInit {
     console.log('lista creata.');
     this.listFilter = '';
   }
+
+  fromStelle: string = "";
+  onStelleClick(valore: string):void
+  {
+    this.fromStelle = valore;
+  }
+
 }
+
+
